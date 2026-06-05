@@ -646,7 +646,7 @@ input, textarea, select { font-family: inherit; }
 
 .galeria__item {
   position: relative;
-  aspect-ratio: 3/2;
+  aspect-ratio: 4/3;
   overflow: hidden;
   border-radius: var(--radius-md);
   cursor: pointer;
@@ -680,8 +680,8 @@ input, textarea, select { font-family: inherit; }
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: var(--sp-24) 0;
+  justify-content: space-between;
+  padding-top: var(--sp-24);
   background: var(--clr-gray-100);
 }
 
@@ -689,6 +689,7 @@ input, textarea, select { font-family: inherit; }
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--sp-4);
+  padding-bottom: var(--sp-16);
 }
 @media (min-width: 600px) {
   .kontakt__panels { grid-template-columns: repeat(2, 1fr); }
