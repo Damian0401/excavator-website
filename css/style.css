@@ -508,12 +508,13 @@ input, textarea, select { font-family: inherit; }
 .service-card__img-wrap {
   position: relative;
   aspect-ratio: 4/3;
-  overflow: hidden;
+  /* no overflow:hidden here — would clip the icon that overhangs the bottom edge */
 }
 .service-card__img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  clip-path: inset(0); /* contains the zoom effect without clipping the icon */
   transition: transform var(--transition-slow);
 }
 .service-card:hover .service-card__img-wrap img { transform: scale(1.06); }
